@@ -9,16 +9,21 @@ package blackjack;
 public class BlackJackCard extends Card
 {
   	//constructors
-
-
-
+        public BlackJackCard(){
+            super(1, "SPADES");
+        }
+        public BlackJackCard(f,s){
+            super(f,s);
+        }
   	public int getValue()
   	{
-  		//enables you to build the value for the game into the card
-  		//this makes writing the whole program a little easier
-
-
-		return 0;
+            int i = getFace();
+            if(i == 1){return 11;}
+            if(i>=10){return 10;}
+            return(i);
   	}
+        public String toString(){
+            return(super.toString() + + " | value = "+ getValue())
+        }
   	
  }
